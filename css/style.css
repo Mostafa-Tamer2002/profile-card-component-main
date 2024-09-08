@@ -1,0 +1,125 @@
+/* !Import */
+@font-face {
+    font-family:'kumR';
+    src: url(../fonts/KumbhSans-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family:'kumB';
+    src: url(../fonts/KumbhSans-Bold.ttf);
+    font-weight: 700;
+}
+/* !Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* !Global Content */
+:root{
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+/* Body */
+body{
+    font-family:sans-serif;
+    background-color: hsl(185, 75%, 39%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 48vw bottom 40vh,
+        left 45vw top 44vh;
+    text-align: center;
+    
+}
+img{
+    max-width: 100%;
+}
+/* Container-Setting */
+.container{
+    margin-right: auto;
+    margin-left: auto;
+}
+/* !Body Content */
+/* ?==================Start-Main================== */
+main .container{
+    background-color: white;
+    border-radius: 1em;
+    overflow: hidden;
+}
+main .container>img{
+    width: 100%;
+}
+/* =========Content-Description========= */
+.container .content img{
+    border-radius: 50%;
+    border: 0.3em solid white;
+    margin-top: -3em;
+}
+.container .content p:first-of-type {
+    font-family:'kumB';
+    color: var(--Very-dark-desaturated-blue);
+}
+.container .content p:first-of-type span {
+    font-family:'kumR';
+    color: var(--Dark-gray);
+}
+.container .content p:last-of-type{
+    font-family:'kumR';
+    color: var(--Dark-gray);
+}
+/* =========End-Content-Description========= */
+
+
+/* =========Number-Status========= */
+.container .number-cont{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 3em;
+    padding-bottom: 1em;
+}
+.container .number-cont h2{
+    color: var(--Very-dark-desaturated-blue);
+    font-family:'kumB';
+
+}
+.container .number-cont p{
+    color: var(--Dark-grayish-blue);
+    font-family:'kumR';
+
+}
+/* =========End-Number-Status========= */
+
+
+
+/* !Media Query */
+/* Mobile: 320px - 480px */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .container {
+        width: 350px;     
+}
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 500px; 
+    }
+}
+
+@media only screen and (min-width:992 ) {
+    .container {
+        width: 970px; 
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 450px;
+    }
+}
